@@ -1,7 +1,9 @@
 package io.github.seiya_matsuoka.sortingrecursion;
 
 import io.github.seiya_matsuoka.sortingrecursion.runner.BubbleSortRunner;
+import io.github.seiya_matsuoka.sortingrecursion.runner.DivideAndConquerRunner;
 import io.github.seiya_matsuoka.sortingrecursion.runner.InsertionSortRunner;
+import io.github.seiya_matsuoka.sortingrecursion.runner.RecursionRunner;
 import io.github.seiya_matsuoka.sortingrecursion.runner.SelectionSortRunner;
 import io.github.seiya_matsuoka.sortingrecursion.runner.TopicRunner;
 
@@ -25,6 +27,8 @@ public class App {
           case "bubble-sort" -> new BubbleSortRunner();
           case "selection-sort" -> new SelectionSortRunner();
           case "insertion-sort" -> new InsertionSortRunner();
+          case "recursion" -> new RecursionRunner();
+          case "divide-and-conquer" -> new DivideAndConquerRunner();
           default -> null;
         };
 
@@ -103,9 +107,11 @@ public class App {
     System.out.println("  bubble-sort");
     System.out.println("  selection-sort");
     System.out.println("  insertion-sort");
+    System.out.println("  recursion");
+    System.out.println("  divide-and-conquer");
     System.out.println();
     System.out.println("指定できる共通オプション:");
-    System.out.println("  --input  例: 5,3,8,1,4");
+    System.out.println("  --input  例: 5,3,8,1,4 / 6");
     System.out.println("  --trace  途中経過を表示する");
     System.out.println("  --target この回では使用しない");
     System.out.println("  --size   大きい入力を自動生成する");
