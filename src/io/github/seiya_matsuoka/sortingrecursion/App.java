@@ -3,6 +3,8 @@ package io.github.seiya_matsuoka.sortingrecursion;
 import io.github.seiya_matsuoka.sortingrecursion.runner.BubbleSortRunner;
 import io.github.seiya_matsuoka.sortingrecursion.runner.DivideAndConquerRunner;
 import io.github.seiya_matsuoka.sortingrecursion.runner.InsertionSortRunner;
+import io.github.seiya_matsuoka.sortingrecursion.runner.MergeSortRunner;
+import io.github.seiya_matsuoka.sortingrecursion.runner.QuickSortRunner;
 import io.github.seiya_matsuoka.sortingrecursion.runner.RecursionRunner;
 import io.github.seiya_matsuoka.sortingrecursion.runner.SelectionSortRunner;
 import io.github.seiya_matsuoka.sortingrecursion.runner.TopicRunner;
@@ -29,6 +31,8 @@ public class App {
           case "insertion-sort" -> new InsertionSortRunner();
           case "recursion" -> new RecursionRunner();
           case "divide-and-conquer" -> new DivideAndConquerRunner();
+          case "merge-sort" -> new MergeSortRunner();
+          case "quick-sort" -> new QuickSortRunner();
           default -> null;
         };
 
@@ -109,6 +113,8 @@ public class App {
     System.out.println("  insertion-sort");
     System.out.println("  recursion");
     System.out.println("  divide-and-conquer");
+    System.out.println("  merge-sort");
+    System.out.println("  quick-sort");
     System.out.println();
     System.out.println("指定できる共通オプション:");
     System.out.println("  --input  例: 5,3,8,1,4 / 6");
